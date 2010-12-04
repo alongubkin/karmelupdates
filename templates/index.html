@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>עדכונים מהכרמל</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="https://github.com/douglascrockford/JSON-js/raw/master/json2.js"></script>
+    <script src="/static/jquery.timeago.js"></script>
+    <script src='/_ah/channel/jsapi'></script>
+    <script src="/static/main.js"></script>
+    
+    <script>
+        channel = new goog.appengine.Channel('{{ token }}');
+        socket = channel.open();
+    
+        socket.onmessage = function(msg) {
+            load(JSON.parse(msg.data), true);
+        };        
+    </script>
+
+</head>
+<body>
+    <ul></ul>
+    <div id="left">
+        <p>
+השריפה בכרמל פרצה בחנוכה ה'תשע"א, 2 בדצמבר 2010. בשעה 11:00 בבוקר התלקחה בכרמל שריפה עזה, שכילתה יער וצמחיה בשטח נרחב בין עוספיא, בית אורן, שכונת דניה בחיפה, טירת הכרמל ומושב מגדים, ובה נשרפו למוות 41 אנשים,‏ כ-17,000 פונו מבתיהם, מעל 35,000 דונם‏ ולמעלה מ-4 מיליון עצים עלו באש. כבר ביומה הראשון הפכה השריפה לאסון השריפה הכבד ביותר בתולדות מדינת ישראל.‏
+<br/><br/>
+<b>אתר זה מתעדכן באופן אוטומטי, אין צורך לרענן את הדף.</b>
+        </p>
+        <p id="contact">
+
+    twitter: <a href="http://twitter.com/#!/alongubkin">@alongubkin</a><br/>
+    email: <a href="mailto:alon.gubkin@gmail.com">alon.gubkin@gmail.com</a><br/><br/>
+    source code: <a href="https://github.com/alongubkin/Karmel-Updates">https://github.com/alongubkin/Karmel-Updates</a>
+        </p>
+        <p><iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?hl=iw&amp;ie=UTF8&amp;msa=0&amp;msid=100056993189454174409.00049671f4878936ccd11&amp;ll=32.717111,35.018921&amp;spn=0.137783,0.219727&amp;z=12&amp;output=embed"></iframe></p>
+    </div>
+
+
+
+</body>
+</html>

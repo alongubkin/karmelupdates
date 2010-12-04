@@ -1,0 +1,4 @@
+cron:
+- description: get rss
+  url: /tasks/updatedb
+  schedule: every 1 minutes
