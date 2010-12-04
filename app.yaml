@@ -9,7 +9,6 @@ handlers:
 
 - url: /tasks/updatedb
   script: main.py
-  login: admin
   
 - url: /.*
   script: main.py
